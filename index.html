@@ -8,11 +8,12 @@
   </style>
   <script src="https://distill.pub/template.v2.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@4.0.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@4.0.2"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@6"></script>
   <style type="text/css" src="main.css"></style>
   <!-- Load in JSON for charts -->
   <script type="text/javascript" src="jhu_country.js"></script>
+  <script type="text/javascript" src="jhu_state.js"></script>
 </head>
 
 <distill-header>
@@ -45,6 +46,7 @@
 	</p>
 	<div>
 	  <div id="vis" style="margin-left: 50%; transform: translateX(-50%);"></div>
+	  <div id="state_vis" style="margin-left: 50%; transform: translateX(-50%);"></div>
 	</div>
 </d-article>
 
@@ -86,9 +88,13 @@
                       + '</div>');
       throw error;
   }
-  const el = document.getElementById('vis');
+  const el_country = document.getElementById('vis');
   vegaEmbed("#vis", jhu_country, embedOpt)
-    .catch(error => showError(el, error));
+    .catch(error => showError(el_country, error));
+
+  const el_state = document.getElementById('vis_state');
+  vegaEmbed("#state_vis", state_vis, embedOpt)
+    .catch(error => showError(el_state, error));
 })(vegaEmbed);
 
 </script>
