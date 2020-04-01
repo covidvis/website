@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .error {
+        color: red;
+    }
+  </style>
+  <script src="https://distill.pub/template.v2.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@4.0.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@6"></script>
+  <style type="text/css" src="main.css"></style>
+  <!-- Load in JSON for charts -->
+  <script type="text/javascript" src="jhu_country.js"></script>
+</head>
+
+<distill-header>
+
+	<div class="content">
+	  <a href="/" class="logo">
+	    <svg viewBox="-607 419 64 64">
+	  <path d="M-573.4,478.9c-8,0-14.6-6.4-14.6-14.5s14.6-25.9,14.6-40.8c0,14.9,14.6,32.8,14.6,40.8S-565.4,478.9-573.4,478.9z"></path>
+	</svg>
+
+	    Distill
+	  </a>
+	  <nav class="nav">
+	    <a href="/about/">About</a>
+	    <a href="/prize/">Prize</a>
+	    <a href="/journal/">Submit</a>
+	  </nav>
+	</div>
+</distill-header>
+
+<d-title>
+	<h1>Visualizing the Effects of Country and State-level Policy for Covid-19</h1>
+	<p></p>
+</d-title>
+
+<d-article>
+  <h1>Hello World</h1>
+  	<p>
+	  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</p>
+	<div id="vis"></div>
+</d-article>
+
+<distill-footer>
+	<div class="footer-container">
+
+	  <a href="/" class="logo">
+	    <svg viewBox="-607 419 64 64">
+	  <path d="M-573.4,478.9c-8,0-14.6-6.4-14.6-14.5s14.6-25.9,14.6-40.8c0,14.9,14.6,32.8,14.6,40.8S-565.4,478.9-573.4,478.9z"></path>
+	</svg>
+
+	    Distill
+	  </a> is dedicated to clear explanations of machine learning
+
+	  <div class="nav">
+	    <a href="https://distill.pub/about/">About</a>
+	    <a href="https://distill.pub/journal/">Submit</a>
+	    <a href="https://distill.pub/prize/">Prize</a>
+	    <a href="https://distill.pub/archive/">Archive</a>
+	    <a href="https://distill.pub/rss.xml">RSS</a>
+	    <a href="https://github.com/distillpub">GitHub</a>
+	    <a href="https://twitter.com/distillpub">Twitter</a>
+	    &nbsp;&nbsp;&nbsp;&nbsp; ISSN 2476-0757
+	  </div>
+
+	</div>
+
+</distill-footer>
+
+<script>
+(function(vegaEmbed) {
+  var embedOpt = {"mode": "vega-lite"};
+
+  function showError(el, error){
+      el.innerHTML = ('<div class="error" style="color:red;">'
+                      + '<p>JavaScript Error: ' + error.message + '</p>'
+                      + "<p>This usually means there's a typo in your chart specification. "
+                      + "See the javascript console for the full traceback.</p>"
+                      + '</div>');
+      throw error;
+  }
+  const el = document.getElementById('vis');
+  vegaEmbed("#vis", jhu_country, embedOpt)
+    .catch(error => showError(el, error));
+})(vegaEmbed);
+
+</script>
+
+
+</body>
+</html>
