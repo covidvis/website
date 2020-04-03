@@ -5,19 +5,25 @@
     .error {
         color: red;
     }
+    pre {
+	  white-space: pre-wrap;
+	  word-break: keep-all;
+	}
   </style>
+  <style type="text/css" src="main.css"></style>
   <script src="https://distill.pub/template.v2.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@4.0.2"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@6"></script>
-  <style type="text/css" src="main.css"></style>
   <!-- Load in JSON for charts -->
   <script type="text/javascript" src="jhu_country.js"></script>
-  <script type="text/javascript" src="jhu_state.js"></script>
+  <script type="text/javascript" src="nyt_state.js"></script>
   <script type="text/javascript" src="state_minimal_changes.js"></script>
   <script type="text/javascript" src="state_big_changes.js"></script>
 </head>
 
+<!-- For reference on the special divs we can use in the distill template, see: https://distill.pub/guide/ (not this is template.v1.js, make everything dt-* into d-*)
+Example article: https://distill.pub/2020/circuits/zoom-in/ -->
 <distill-header>
 
 	<div class="content">
@@ -25,7 +31,6 @@
 	    <svg viewBox="-607 419 64 64">
 	  <path d="M-573.4,478.9c-8,0-14.6-6.4-14.6-14.5s14.6-25.9,14.6-40.8c0,14.9,14.6,32.8,14.6,40.8S-565.4,478.9-573.4,478.9z"></path>
 	</svg>
-
 	    Distill
 	  </a>
 	  <nav class="nav">
@@ -42,33 +47,62 @@
 </d-title>
 
 <d-article>
-  	<p>
-	  Introduction: 
-	  - Say something about every policy measure has a side effect. For example, in addition to the economic impact to businesses, quaruntine also has negative long term mental health implications (https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)30460-8/fulltext). 
-	  - So our goal is to investigate the effects of these measures to better understand what tradeoffs can be made and what potential gains. 
-	  - Also state warning or precautionary message and say there is danger in extrapolating too much from limited historical data. We will be keeping the dashboard up-to-date with latest data to see how these trends unfold.
-	</p>
-	<h2>Effect of Lockdown</h2>
-	<p>
-		We first look at the growth curve of confirmed cases across countries. 
-		- describe what we mean by full or partial lockdown
-		- describe the simple model we use for extrapolation
-	</p>
+<pre>
+Introduction: 
+- Say something about every policy measure has a side effect. For example, in addition to the economic impact to businesses, quaruntine also has negative long term mental health implications (https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)30460-8/fulltext). 
+- So our goal is to investigate the effects of these measures to better understand what tradeoffs can be made and what potential gains. 
+- Also state warning or precautionary message and say there is danger in extrapolating too much from limited historical data. We will be keeping the dashboard up-to-date with latest data to see how these trends unfold.
+</pre>
+	<h2>Overall Effect of Lockdown</h2>
+<pre>
+We first look at the growth curve of confirmed cases across countries. 
+- describe what we mean by full or partial lockdown
+- describe the simple model we use for extrapolation
+</pre>
+
+	<figure class="l-body-outset">
 	  <div id="vis" ></div>
-	We take a look at specific countries where the lockdown seems to have an effect. We note that there are many possible effect that could have contributed to the decrease. Also note one would expect there to be a lag between the lockdown date and the decrease in growth of cases. There are often soft measures as well as population-level behavioral changes leading up to the lockdown, which is why sometimes we see decreases right away.
- 	
- 	<div id="state_vis"></div>
+	  <figcaption>
+          caption
+      </figcaption>
+	</figure>
 
- 	There are no significant increase/decrease. This does not mean that the policy are ineffective for these region. 
-	Variation in the availability of level of testing across states.
- 	Stay-at-home order are less strict than full lockdown. It might take more time for the data to show decreases.
+<pre>
+- We take a look at specific countries where the lockdown seems to have an effect. 
+- We note that there are many possible effect that could have contributed to the decrease. 
+- Also note one would expect there to be a lag between the lockdown date and the decrease in growth of cases. There are often soft measures as well as population-level behavioral changes leading up to the lockdown date, which is why sometimes we see decreases right away.
+</pre>
+ 	<figure class="l-body-outset">
+ 		<div style="display: inline-block;">
+		 	<div id="state_vis"></div>
+		 </div>
+		 <figcaption>
+          caption
+        </figcaption>
+	 </figure>
+<pre>
+The trends for US states are less clear. For some states, such as New York and Illinois, there are visible decreases in growth of the number of confirmed cases. But for other states, such as California and Pennsylvania, the trend is less clear. We note that this does not mean that stay-at-home policies are less ineffective in these region. There are many potential reasons why: 
+- Variation in the availability of level of testing across states.
+	- Stay-at-home order are less strict than full lockdown (in some of the country data, esp European and Asian countries). It might take more time for the data to show decreases.
+- TODO: Make colors for each state unique and consistent across all views. Do not use red as a color.
+- TODO: Possibly remove interactions and keep prediction lines to be shown by default
+</pre>
+	<figure class="l-body-outset">
+        <div style="display: inline-block;">
+			<div id="state_big_changes" style="width: 40%;"></div>
+			<div id="state_minimal_changes" style="width: 40%;"></div>
+		</div>
+        <figcaption>
+          caption
+        </figcaption>
+      </figure>
+	
+<h2>Effect of Different Types of Lockdown</h2>
+<pre>
+- Using "Lockdown Type", there is no clear effect between full/partial lockdown type
+- Using the "World" data sheet, look at effect of Type (Internal, School Closure, Border) and Level (National, Regional)
+</pre>
 
- 	Highlight States showing decreases:
- 	- New York
- 	- Michigan
-	- Illinois
-	<div id="state_minimal_changes"></div>
-	<div id="state_big_changes"></div>
 </d-article>
 
 <distill-footer>
