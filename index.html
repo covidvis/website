@@ -14,6 +14,8 @@
   <!-- Load in JSON for charts -->
   <script type="text/javascript" src="jhu_country.js"></script>
   <script type="text/javascript" src="jhu_state.js"></script>
+  <script type="text/javascript" src="state_minimal_changes.js"></script>
+  <script type="text/javascript" src="state_big_changes.js"></script>
 </head>
 
 <distill-header>
@@ -40,14 +42,33 @@
 </d-title>
 
 <d-article>
-  <h1>Hello World</h1>
   	<p>
-	  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	  Introduction: 
+	  - Say something about every policy measure has a side effect. For example, in addition to the economic impact to businesses, quaruntine also has negative long term mental health implications (https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)30460-8/fulltext). 
+	  - So our goal is to investigate the effects of these measures to better understand what tradeoffs can be made and what potential gains. 
+	  - Also state warning or precautionary message and say there is danger in extrapolating too much from limited historical data. We will be keeping the dashboard up-to-date with latest data to see how these trends unfold.
 	</p>
-	<div>
-	  <div id="vis" style="margin-left: 50%; transform: translateX(-50%);"></div>
-	  <div id="state_vis" style="margin-left: 50%; transform: translateX(-50%);"></div>
-	</div>
+	<h2>Effect of Lockdown</h2>
+	<p>
+		We first look at the growth curve of confirmed cases across countries. 
+		- describe what we mean by full or partial lockdown
+		- describe the simple model we use for extrapolation
+	</p>
+	  <div id="vis" ></div>
+	We take a look at specific countries where the lockdown seems to have an effect. We note that there are many possible effect that could have contributed to the decrease. Also note one would expect there to be a lag between the lockdown date and the decrease in growth of cases. There are often soft measures as well as population-level behavioral changes leading up to the lockdown, which is why sometimes we see decreases right away.
+ 	
+ 	<div id="state_vis"></div>
+
+ 	There are no significant increase/decrease. This does not mean that the policy are ineffective for these region. 
+	Variation in the availability of level of testing across states.
+ 	Stay-at-home order are less strict than full lockdown. It might take more time for the data to show decreases.
+
+ 	Highlight States showing decreases:
+ 	- New York
+ 	- Michigan
+	- Illinois
+	<div id="state_minimal_changes"></div>
+	<div id="state_big_changes"></div>
 </d-article>
 
 <distill-footer>
@@ -95,6 +116,14 @@
   const el_state = document.getElementById('vis_state');
   vegaEmbed("#state_vis", state_vis, embedOpt)
     .catch(error => showError(el_state, error));
+
+  const el_state_big_changes = document.getElementById('state_big_changes');
+  vegaEmbed("#state_big_changes", state_big_changes, embedOpt)
+    .catch(error => showError(el_state_big_changes, error));
+
+  const el_state_minimal_changes = document.getElementById('state_minimal_changes');
+  vegaEmbed("#state_minimal_changes", state_minimal_changes, embedOpt)
+    .catch(error => showError(el_state_minimal_changes, error));
 })(vegaEmbed);
 
 </script>
