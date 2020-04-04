@@ -20,6 +20,10 @@
   <script type="text/javascript" src="nyt_state.js"></script>
   <script type="text/javascript" src="state_minimal_changes.js"></script>
   <script type="text/javascript" src="state_big_changes.js"></script>
+  <script type="text/javascript" src="change_by_state.js"></script>
+  <script type="text/javascript" src="change_by_country.js"></script>
+  <script type="text/javascript" src="deaths_by_country.js"></script>
+  <script type="text/javascript" src="deaths_by_state.js"></script>
 </head>
 
 <!-- For reference on the special divs we can use in the distill template, see: https://distill.pub/guide/ (not this is template.v1.js, make everything dt-* into d-*)
@@ -53,7 +57,7 @@ Introduction:
 - So our goal is to investigate the effects of these measures to better understand what tradeoffs can be made and what potential gains. 
 - Also state warning or precautionary message and say there is danger in extrapolating too much from limited historical data. We will be keeping the dashboard up-to-date with latest data to see how these trends unfold.
 </pre>
-	<h2>Overall Effect of Lockdown</h2>
+	<h2>Effects of Lockdown on Countries</h2>
 <pre>
 We first look at the growth curve of confirmed cases across countries. 
 - describe what we mean by full or partial lockdown
@@ -71,6 +75,9 @@ We first look at the growth curve of confirmed cases across countries.
 - We take a look at specific countries where the lockdown seems to have an effect. 
 - We note that there are many possible effect that could have contributed to the decrease. 
 - Also note one would expect there to be a lag between the lockdown date and the decrease in growth of cases. There are often soft measures as well as population-level behavioral changes leading up to the lockdown date, which is why sometimes we see decreases right away.
+<h2>Effects of Lockdown on States</h2>
+
+
 </pre>
  	<figure class="l-body-outset">
  		<div style="display: inline-block;">
@@ -95,13 +102,35 @@ The trends for US states are less clear. For some states, such as New York and I
         <figcaption>
           caption
         </figcaption>
-      </figure>
-	
+    </figure>
+We look at specific countries that implemented X, Y, Z policies in series. Explain the policies that they took and possibly what motivated them to implement stricter measures.
+<figure class="l-body-outset">
+    <div style="display: inline-block;">
+		<img src="multipleLinesCountryExample.jpeg">
+	</div>
+    <figcaption>
+      Placeholder Image + Caption
+    </figcaption>
+  </figure>
+
 <h2>Effect of Different Types of Lockdown</h2>
 <pre>
 - Using "Lockdown Type", there is no clear effect between full/partial lockdown type
 - Using the "World" data sheet, look at effect of Type (Internal, School Closure, Border) and Level (National, Regional)
 </pre>
+
+<h2>Death, Rate of Change, and other charts</h2>
+<figure class="l-body-outset">
+		<div id="change_by_country"></div>
+		<div id="change_by_state"></div>
+		
+        <div id="deaths_by_country"></div>
+		<div id="deaths_by_state"></div>
+		
+        <figcaption>
+          caption
+        </figcaption>
+    </figure>
 
 </d-article>
 
@@ -128,36 +157,20 @@ The trends for US states are less clear. For some states, such as New York and I
 	  </div>
 
 	</div>
-
 </distill-footer>
 
 <script>
 (function(vegaEmbed) {
   var embedOpt = {"mode": "vega-lite"};
 
-  function showError(el, error){
-      el.innerHTML = ('<div class="error" style="color:red;">'
-                      + '<p>JavaScript Error: ' + error.message + '</p>'
-                      + "<p>This usually means there's a typo in your chart specification. "
-                      + "See the javascript console for the full traceback.</p>"
-                      + '</div>');
-      throw error;
-  }
-  const el_country = document.getElementById('vis');
   vegaEmbed("#vis", jhu_country, embedOpt)
-    .catch(error => showError(el_country, error));
-
-  const el_state = document.getElementById('vis_state');
   vegaEmbed("#state_vis", state_vis, embedOpt)
-    .catch(error => showError(el_state, error));
-
-  const el_state_big_changes = document.getElementById('state_big_changes');
   vegaEmbed("#state_big_changes", state_big_changes, embedOpt)
-    .catch(error => showError(el_state_big_changes, error));
-
-  const el_state_minimal_changes = document.getElementById('state_minimal_changes');
   vegaEmbed("#state_minimal_changes", state_minimal_changes, embedOpt)
-    .catch(error => showError(el_state_minimal_changes, error));
+  vegaEmbed("#deaths_by_country", deaths_by_country, embedOpt)
+  vegaEmbed("#deaths_by_state", deaths_by_state, embedOpt)
+  vegaEmbed("#change_by_country", change_by_country, embedOpt)
+  vegaEmbed("#change_by_state", change_by_state, embedOpt)
 })(vegaEmbed);
 
 </script>
