@@ -72,6 +72,7 @@ excerpt_separator: '
 exclude:
 - '*.sublime-project'
 - '*.sublime-workspace'
+- old
 - vendor
 - .asset-cache
 - .bundle
@@ -167,7 +168,7 @@ plugins:
 reCaptcha:
   secret: null
   siteKey: null
-repository: null
+repository: covidvis/covidvis.github.io
 sass:
   sass_dir: _sass
   style: compressed
@@ -189,7 +190,7 @@ title: Coviz
 title_separator: '-'
 twitter:
   username: null
-url: null
+url: https://covidvis.github.io
 whitelist:
 - jekyll-paginate
 - jekyll-sitemap
