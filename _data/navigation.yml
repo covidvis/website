@@ -1,0 +1,7 @@
+main:
+  - title: "Country-level Trends"
+    url: "#vis"
+  - title: "State-level Trends"
+    url: "#state_vis"
+  - title: "Source"
+    url: https://github.com/covidvis/covid19-vis
