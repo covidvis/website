@@ -17,14 +17,15 @@ layout: single
  
  <!-- Since the growth in number of cases is exponential, the y-axes is plotted logarithmically to show the trend more effectively. By clicking on the curve of a specific country, let's say Italy, you will find a vertical dashed line indicating the date when the country implemented a lockdown.  -->
 <div id="country_vis" class="overflow-center"></div>
+-------------------------------------------------------
 
 <p>A lockdown can be a full lockdown in that there is a nation-wide declaration of a lockdown (level of enforcement? or simply stay-at-home-order? Need more info here). On the other hand, a partial lockdown means that some but not all regions within the country that have declared a lockdown, such as in case of the United States. We also plot a projection line for the original trajectory of the trend before the lockdown date. The projection extrapolates the growth curve  based on the slope computed up until the lockdown date. This projection is based on the simple assumption that the growth rate stays fixed throughout the entire period of time, which is not always a valid assumption for a number of reasons. For example, as the number of infected individuals increases, the <a href="https://www.washingtonpost.com/graphics/2020/world/corona-simulator/">growth will likely slow</a> due to the growing number of recovered people with immunity. Nevertheless, this serves as one comparison point that we can use to understand the effects of these interventions in slowing the infection rates.</p>
-
--------------------------------------------------------
 
 <h2 id="state_vis_section">Explore State-Level Trends</h2>
 Now we take a look at the state-level trends in the US. 
 <div id="state_vis" class="overflow-center"></div>
+-------------------------------------------------------
+
 The trends for US states are less clear. For some states, such as New York and Illinois, there are visible decreases in growth of the number of confirmed cases. But for other states, such as California and Pennsylvania, the trend is less clear. We note that this does not mean that stay-at-home policies are less ineffective in these region. 
 <!-- There are many potential reasons why: 
 - Variation in the availability of level of testing across states.
