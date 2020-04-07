@@ -129,7 +129,9 @@ head_scripts:
 - scripts/jhu_country.js
 - scripts/nyt_state.js
 - scripts/jhu_country.js
+- scripts/jhu_country_death.js
 - scripts/jhu_state.js
+- scripts/jhu_state_death.js
 highlighter: rouge
 include:
 - .htaccess
