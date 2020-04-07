@@ -6,8 +6,8 @@ algolia:
 analytics:
   google:
     anonymize_ip: null
-    tracking_id: null
-  provider: false
+    tracking_id: UA-162996996-1
+  provider: google
 author:
   avatar: null
   bio: I am an **amazing** person.
