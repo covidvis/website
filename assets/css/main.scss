@@ -71,7 +71,7 @@
     border: 1px solid #ccc;
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1300px) {
     .tab-content {
         transform: translateX(-75px);
     }
@@ -84,12 +84,27 @@
     .github-corner {
         display: none;
     }
+    .tab label {
+        padding: 10px;
+        font-size: 14pt;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .page {
+        width: 100%;
+    }
+    .tab label {
+        padding: 5px;
+        font-size: 10pt;
+    }
 }
 
 [type=radio]:checked ~ label {
     background: rgb(242,246,246);
     border-bottom: 1px solid rgb(242,246,246);
 }
+
 [type=radio]:checked ~ label ~ .tab-content {
     z-index: 1;
     visibility: visible;
