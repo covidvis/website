@@ -17,7 +17,7 @@ layout: single
 </div>
 </div>
 
-<h3>About</h3>
+<h2>About</h2>
 <p>
     The rapid spread of COVID-19 has led many countries and regions to enact various interventions, such as social
     distancing, school closures, and border control in order to mitigate the growth of infection rates. Understanding the effects
