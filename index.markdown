@@ -67,17 +67,13 @@ layout: single
     latest data to see how these trends unfold.)
 </p>
 
-<h2 id="country_vis_section">Explore Country-Level Trends</h2>
+<h2 id="lockdown_section">Effect of lockdown</h2>
 <p>
     First, we plot the log of the number confirmed cases across the top ten countries with highest number of cases. We
     overlaid SARS-CoV-2 trends with various countermeasures taken by governing entities. We invite the reader to reveal
     such measures in the chart by clicking the legend, the dropdown below the chart, or the chart itself.
 </p>
- 
-{% comment %} 
-<div id="country_vis" class="overflow-center"></div>
--------------------------------------------------------
-{% endcomment %} 
+
 
 <p>
     A lockdown can be a full lockdown in that there is a nation-wide declaration of a lockdown (level of enforcement? or
@@ -93,29 +89,6 @@ layout: single
     due to the growing number of recovered people with immunity. Nevertheless, this serves as one comparison point that
     we can use to understand the effects of these interventions in slowing the infection rates.
 </p>
-
-<h2 id="state_vis_section">Explore State-Level Trends</h2>
-Now we take a look at the state-level trends in the US. 
-{% comment %} 
-<div id="state_vis" class="overflow-center"></div>
--------------------------------------------------------
-{% endcomment %} 
-
-The trends for US states are less clear. For some states, such as New York and
-Illinois, there are visible decreases in growth of the number of confirmed
-cases. But for other states, such as California and Pennsylvania, the trend is
-less clear. We note that this does not mean that stay-at-home policies are less
-effective in these region. 
-
-{% comment %} 
-There are many potential reasons why: 
-- Variation in the availability of level of testing across states.
-	- Stay-at-home order are less strict than full lockdown (in some of the country data, esp European and Asian countries). It might take more time for the data to show decreases.
- <div style="display: inline-block;">
-	<div id="state_big_changes" style="width: 40%;"></div>
-	<div id="state_minimal_changes" style="width: 40%;"></div>
-</div>
-{% endcomment %} 
 
 <h3>Acknowledgments</h3>
 <p>

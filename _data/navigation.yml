@@ -1,7 +1,5 @@
 main:
-  - title: "Country-level Trends"
-    url: "#country_vis_section"
-  - title: "State-level Trends"
-    url: "#state_vis_section"
+  - title: "Lockdown Effects"
+    url: "#lockdown_section"
   - title: "Source"
     url: https://github.com/covidvis/covid19-vis
