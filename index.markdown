@@ -4,17 +4,28 @@
 
 layout: single
 ---
-<div class="chart-grid">
+<div class="tabs">
 
-<div>
-<h2 class="centered">Country Trends</h2>
-<div id="country_vis"></div>
-</div>
+    <div class="tab">
+        <input type="radio" id="tab-1" name="tab-group-1" checked>
+        <label for="tab-1">World</label>
 
-<div>
-<h2 class="centered">State Trends</h2>
-<div id="state_vis"></div>
-</div>
+        <div class="tab-content">
+            <h2 class="centered">Country Trends</h2>
+            <div id="country_vis"></div>
+        </div>
+    </div>
+
+    <div class="tab">
+        <input type="radio" id="tab-2" name="tab-group-1">
+        <label for="tab-2">USA</label>
+
+        <div class="tab-content">
+            <h2 class="centered">State Trends</h2>
+            <div id="state_vis"></div>
+        </div>
+    </div>
+
 </div>
 
 <h2>About</h2>

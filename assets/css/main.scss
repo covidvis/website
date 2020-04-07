@@ -31,3 +31,66 @@
 .centered {
     text-align: center;
 }
+
+.tabs {
+    position: relative;
+    min-height: 650px; /* This part sucks */
+    clear: both;
+    margin: 25px 0;
+}
+.tab {
+    float: left;
+}
+.tab label {
+    background: #eee;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    margin-left: -1px;
+    position: relative;
+    left: 1px;
+    z-index: 2;
+}
+.tab [type=radio] {
+    display: none;
+}
+.tab-content {
+    position: absolute;
+    top: 28px;
+    left: 0;
+    background: rgb(242,246,246);
+    right: 0;
+    bottom: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    margin-bottom: -40px;
+    margin-right: -150px;
+    visibility: hidden;
+    border: 1px solid #ccc;
+}
+
+@media only screen and (min-width: 1200px) {
+    .tab-content {
+        transform: translateX(-75px);
+    }
+    .tab label {
+        transform: translateX(-75px);
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .github-corner {
+        display: none;
+    }
+}
+
+[type=radio]:checked ~ label {
+    background: rgb(242,246,246);
+    border-bottom: 1px solid rgb(242,246,246);
+}
+[type=radio]:checked ~ label ~ .tab-content {
+    z-index: 1;
+    visibility: visible;
+}
