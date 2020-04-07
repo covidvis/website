@@ -73,6 +73,7 @@ exclude:
 - '*.sublime-project'
 - '*.sublime-workspace'
 - old
+- _posts
 - vendor
 - .asset-cache
 - .bundle
@@ -156,8 +157,6 @@ minimal_mistakes_skin: mint
 name: ''
 naver_site_verification: null
 og_image: null
-paginate: 5
-paginate_path: /page:num/
 permalink: /:categories/:title/
 plugins:
 - jekyll-paginate

@@ -4,12 +4,25 @@
 
 layout: single
 ---
+<div class="chart-grid">
+
+<div>
+<h2 class="centered">Country Trends</h2>
+<div id="country_vis"></div>
+</div>
+
+<div>
+<h2 class="centered">State Trends</h2>
+<div id="state_vis"></div>
+</div>
+</div>
+
 <h3>About</h3>
 <p>
     The rapid spread of COVID-19 has led many countries and regions to enact various interventions, such as social
-    distancing, school closure, and border control, to mitigate the growth of infection rates. Understanding the effects
-    of these policies is particularly important since every intervention strategy comes with its side effects. For
-    example, in addition to the economic impact to businesses, there are
+    distancing, school closures, and border control in order to mitigate the growth of infection rates. Understanding the effects
+    of these policies is particularly important since every intervention strategy comes with its side effects.
+    For example, in addition to the economic impact to businesses, there are
     <a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)30460-8/fulltext">
     negative mental health implications
     </a> to self-isolation and quarantine.
@@ -30,8 +43,10 @@ layout: single
     such measures in the chart by clicking the legend, the dropdown below the chart, or the chart itself.
 </p>
  
+{% comment %} 
 <div id="country_vis" class="overflow-center"></div>
 -------------------------------------------------------
+{% endcomment %} 
 
 <p>
     A lockdown can be a full lockdown in that there is a nation-wide declaration of a lockdown (level of enforcement? or
@@ -50,10 +65,16 @@ layout: single
 
 <h2 id="state_vis_section">Explore State-Level Trends</h2>
 Now we take a look at the state-level trends in the US. 
+{% comment %} 
 <div id="state_vis" class="overflow-center"></div>
 -------------------------------------------------------
+{% endcomment %} 
 
-The trends for US states are less clear. For some states, such as New York and Illinois, there are visible decreases in growth of the number of confirmed cases. But for other states, such as California and Pennsylvania, the trend is less clear. We note that this does not mean that stay-at-home policies are less effective in these region. 
+The trends for US states are less clear. For some states, such as New York and
+Illinois, there are visible decreases in growth of the number of confirmed
+cases. But for other states, such as California and Pennsylvania, the trend is
+less clear. We note that this does not mean that stay-at-home policies are less
+effective in these region. 
 
 {% comment %} 
 There are many potential reasons why: 
@@ -67,12 +88,14 @@ There are many potential reasons why:
 
 <h3>Acknowledgments</h3>
 <p>
-We build on the preprocessing script by <a href="https://github.com/wadefagen/91-DIVOC/blob/master/pages/covid-visualization/processData.py">Wade Fagen</a> for this work.
+We build on the preprocessing script by
+<a href="https://github.com/wadefagen/91-DIVOC/blob/master/pages/covid-visualization/processData.py">Wade Fagen</a>
+for this work.
 </p>
 
 <h3 id="references">Sources</h3>
 <ol id="references-list" class="references">
-<li id="jhu_data" class="title">
-Data derived from John Hopkins CSSE <a href="https://github.com/CSSEGISandData/COVID-19">[link]</a>
-</li>
+    <li id="jhu_data" class="title">
+    Data derived from John Hopkins CSSE <a href="https://github.com/CSSEGISandData/COVID-19">[link]</a>
+    </li>
 </ol>

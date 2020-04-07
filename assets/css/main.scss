@@ -13,7 +13,21 @@
 .greedy-nav a { color: rgb(242,246,246); }
 .greedy-nav a:hover { color: rgb(242,246,246); }
 
+.page {
+    width: calc(100% - #{$right-sidebar-width-narrow});
+}
+
 .overflow-center {
     margin-left: 50%;
     transform: translateX(-50%);
+}
+
+.chart-grid {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr; /* fraction*/
+}
+
+.centered {
+    text-align: center;
 }
