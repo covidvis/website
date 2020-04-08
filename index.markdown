@@ -7,7 +7,7 @@ layout: single
 
 About
 -----
-The rapid spread of COVID-19 has led many countries and regions to enact various interventions, such as social
+The rapid spread of SARS-CoV-2 has led many countries and regions to enact various interventions, such as social
 distancing, school closures, and border control in order to mitigate the growth of infection rates. Understanding the effects
 of these policies is particularly important since every intervention strategy comes with its side effects.
 We wanted to understand the impact of strategies and their combinations on the disease spread.
