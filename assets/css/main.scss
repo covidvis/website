@@ -8,13 +8,21 @@
 @import "minimal-mistakes"; // main partials
 
 // your styles here
-.masthead { background:#0f2e3d; }
+.masthead {
+    background:#0f2e3d;
+    min-width: 800px;
+}
 .greedy-nav { background: #0f2e3d; }
 .greedy-nav a { color: rgb(242,246,246); }
 .greedy-nav a:hover { color: rgb(242,246,246); }
 
 .page {
     width: calc(100% - #{$right-sidebar-width-narrow});
+    min-width: 800px;
+}
+
+#footer.page__footer {
+    min-width: 800px;
 }
 
 .overflow-center {
