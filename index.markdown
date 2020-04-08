@@ -10,8 +10,8 @@ Visualizing the Impact of Intervention Strategies
 The rapid spread of <a href="https://en.wikipedia.org/wiki/Coronavirus_disease_2019">SARS-CoV-2</a> has led many countries and regions to enact various <a href="https://en.wikipedia.org/wiki/National_responses_to_the_2019%E2%80%9320_coronavirus_pandemic">interventions</a>, 
 such as social distancing, school closures, and border control, 
 in order to mitigate the growth of infection. Understanding the effects
-of these policies is particularly important since every intervention strategy comes with its side effects.
-We wanted to understand the impact of strategies and their combinations on the disease spread.
+of these interventions is particularly important since each strategy comes with its side effects.
+We wanted to understand the impact of intervention strategies and their combinations on the disease spread.
 After collecting data at the country and state levels for certain types of interventions, we overlaid
 them on the disease growth curves, shown below.
 {% comment %}
@@ -78,7 +78,7 @@ We overlaid our trends with various countermeasures
 taken by the governing entities. 
 We invite the reader to reveal
 such measures on a per-region basis
-in the chart by clicking the legend, 
+in the chart by clicking the legend (recommended), 
 the dropdown below the chart, or the chart itself.
 </p>
 
@@ -98,10 +98,10 @@ declaration of a lockdown.
 <p>
 To visualize the impact of these lockdowns,
 we also plot a
-projection line for the original trajectory 
+projection line for the <b>original trajectory</b> 
 of the trend before the lockdown date. 
 The projection extrapolates the
-growth curve based on the slope computed up until the lockdown date. 
+growth based on the slope computed up until the lockdown date. 
 This projection is based on the simple
 assumption that the growth rate stays fixed 
 throughout the entire period of time, 
@@ -110,9 +110,11 @@ assumption for a number of reasons.
 For example, as the number of infected individuals increases, the
 <a href="https://www.washingtonpost.com/graphics/2020/world/corona-simulator/">
 growth will likely slow down</a>
-due to the growing number of recovered people with immunity. 
+due to the increasing number of 
+recovered people with immunity. 
 Nevertheless, this serves as one comparison point that
-we can use to understand the effects of these interventions in slowing the infection rates.
+we can use to understand the effects of 
+interventions in slowing the infection rates.
 </p>
 
 
@@ -130,9 +132,11 @@ other confounding variables, such as the amount and availability of tests.
 We will be keeping the dashboard up-to-date with
 the latest data to see how these trends unfold. 
 
-Another drawback is that our extrapolation (labeled as original trajectory in the visualization) 
+Another drawback is that our extrapolation 
+(labeled as original trajectory in the visualization) 
 is easy-to-understand but simplistic: other more
-sophisticated models exist, but our intent is not prediction, but rather provide a visual cue
+sophisticated models exist. 
+That said, our intent is not prediction, but rather provide a visual cue
 to study the differences before and after the intervention.
 
 Finally, we must mention that aggregate patterns and trends often obscure individual datapoints and outliers. Visualizing data on a logarithmic scale, while making it easier to visualize 
@@ -177,7 +181,7 @@ Our visualization dashboard employs many popular open-source packages, including
 
 Team
 ----
-Covidvis is a collaborative effort across epidemiology, public health, and visualization researchers at UC Berkeley ([EECS](https://eecs.berkeley.edu/), [School of Information](https://www.ischool.berkeley.edu/), and [School of Public Health](https://publichealth.berkeley.edu/)), University of Illinois ([Computer Science](https://www.cs.illinois.edu/)), and Georgia Tech ([Computational Science and Engineering](https://cse.gatech.edu/)). 
+Covidvis is a collaborative effort across computational epidemiology, public health, and visualization researchers at UC Berkeley ([EECS](https://eecs.berkeley.edu/), [School of Information](https://www.ischool.berkeley.edu/), and [School of Public Health](https://publichealth.berkeley.edu/)), University of Illinois ([Computer Science](https://www.cs.illinois.edu/)), and Georgia Tech ([Computational Science and Engineering](https://cse.gatech.edu/)). 
 
 From the visualization side, the team includes [Doris Jung-Lin Lee](http://dorisjunglinlee.com/) (UC Berkeley School of Information); [Stephen Macke](https://smacke.net/) (University of Illinois Computer Science and UC Berkeley EECS); [Ti-Chung Cheng](https://tichung.com/), [Tana Wattanawaroon](https://www.linkedin.com/in/tanawattanawaroon/), and Pingjing Yang (University of Illinois Computer Science); and [Aditya Parameswaran](https://people.eecs.berkeley.edu/~adityagp/) (UC Berkeley School of Information and EECS).
 
