@@ -25,7 +25,7 @@ footer_scripts:
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Covidvis"
+title                    : ""
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : ""
