@@ -5,7 +5,7 @@ algolia:
   search_only_api_key: null
 analytics:
   google:
-    anonymize_ip: null
+    anonymize_ip: true
     tracking_id: UA-163087607-1
   provider: google-universal
 author:
@@ -150,7 +150,7 @@ kramdown:
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   toc_levels: 1..6
 locale: en-US
-logo: "/assets/logo.png"
+logo: /assets/logo.png
 lsi: false
 markdown: kramdown
 markdown_ext: markdown,mkdown,mkdn,mkd,md
@@ -187,7 +187,7 @@ tag_archive:
 teaser: null
 theme: minimal-mistakes-jekyll
 timezone: null
-title: 
+title: Covidvis
 title_separator: '-'
 twitter:
   username: null
