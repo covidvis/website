@@ -10,7 +10,7 @@
 // your styles here
 .masthead {
     background:#000000;
-    min-width: 800px;
+    min-width: 900px;
 }
 .site-logo img{ max-height: 4.5rem; }
 .greedy-nav { background: #000000; }
@@ -19,11 +19,11 @@
 
 .page {
     width: calc(100% - #{$right-sidebar-width-narrow});
-    min-width: 800px;
+    min-width: 900px;
 }
 
 #footer.page__footer {
-    min-width: 800px;
+    min-width: 900px;
 }
 
 .overflow-center {
