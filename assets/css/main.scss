@@ -8,6 +8,27 @@
 @import "minimal-mistakes"; // main partials
 
 // your styles here
+
+body {
+    color: #40514e;
+    font-family: 'Khula', sans-serif, -apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
+    line-height: 1.5;
+}
+
+
+h2 {
+    font-size: 1.25em;
+    font-family: 'Khula', sans-serif, -apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
+}
+
+.masthead__menu {
+    font-family: 'Khula', sans-serif, -apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
+}
+
+footer {
+    font-family: 'Khula', sans-serif, -apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
+}
+
 .masthead {
     background:#000000;
     min-width: 900px;
