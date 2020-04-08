@@ -31,7 +31,7 @@ footer {
 
 .masthead {
     background:#000000;
-    min-width: 900px;
+    min-width: 864px;
 }
 .site-logo img{
     max-height: 2.5rem;
@@ -42,16 +42,21 @@ footer {
 
 .page {
     width: calc(100% - #{$right-sidebar-width-narrow});
-    min-width: 900px;
+    min-width: 864px;
 }
 
 #footer.page__footer {
-    min-width: 900px;
+    min-width: 864px;
 }
 
 .overflow-center {
-    margin-left: 50%;
-    transform: translateX(-50%);
+}
+
+@media only screen and (min-width: 864px) {
+    .overflow-center {
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
 .chart-grid {
@@ -67,11 +72,6 @@ footer {
 .page__footer {
     background:#000000; 
 }
-//@media only screen and (min-width: 1300px) {
-//    .tab-content {
-//        transform: translateX(-75px);
-//    }
-//}
 
 @media only screen and (max-width: 1300px) {
     .github-corner {
@@ -79,10 +79,8 @@ footer {
     }
 }
 
-@media only screen and (max-width: 900px) {
-    .page {
-        width: 100%;
-    }
+.tabbed-ui {
+  width: 850px;
 }
 
 /* Style the tab */
@@ -115,6 +113,7 @@ footer {
 
 /* Style the tab content */
 .tab-content {
+    display: none;
     padding: 6px 12px;
     border: 1px solid #ccc;
     border-top: none;

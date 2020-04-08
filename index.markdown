@@ -21,6 +21,7 @@ negative mental health implications
 </a> to self-isolation and quarantine.
 {% endcomment %}
 
+<div class="tabbed-ui overflow-center">
 <div class="tab">
   <button class="tablinks" id="default-open" onclick="openChart(event, 'country-case-tab')">World: Cases</button>
   <button class="tablinks" onclick="openChart(event, 'country-death-tab')">World: Deaths</button>
@@ -46,6 +47,7 @@ negative mental health implications
 <div class="tab-content" id="usa-death-tab">
     <h2 class="centered">State Trends</h2>
     <div id="state_death_vis"></div>
+</div>
 </div>
 
 <h2 id="lockdown_section">Effects of Lockdowns</h2>
@@ -75,7 +77,7 @@ regions within the country that have declared a lockdown, such as in case of the
 Likewise, when visualizing US states, 
 a <i>full lockdown</i> is 
 one where there is a state-wide 
-declaration of a shelter-at-home or stay-at-home order.
+declaration of a stay at home-type order.
 </p>
 
 <p>

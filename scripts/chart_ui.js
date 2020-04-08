@@ -4,12 +4,11 @@ function openChart(evt, chartName) {
     // Declare all variables
     var i, tabcontent, tablinks;
 
-    console.log(chartName);
 
     // Get all elements with class='tabcontent' and hide them
-    tabcontent = document.getElementsByClassName('tabcontent');
+    tabcontent = document.getElementsByClassName('tab-content');
     for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.visibility = 'hidden';
+        tabcontent[i].style.display = 'none';
     }
 
     // Get all elements with class='tablinks' and remove the class 'active'
@@ -19,6 +18,6 @@ function openChart(evt, chartName) {
     }
 
     // Show the current tab, and add an 'active' class to the button that opened the tab
-    document.getElementById(chartName).style.visibility = 'visible';
+    document.getElementById(chartName).style.display = 'block';
     evt.currentTarget.className += ' active';
 }
