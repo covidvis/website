@@ -18,10 +18,10 @@ head_scripts:
   - https://cdn.jsdelivr.net/npm//vega@5
   - https://cdn.jsdelivr.net/npm//vega-lite@4.0.2
   - https://cdn.jsdelivr.net/npm//vega-embed@6
-  - scripts/jhu_country.js
-  - scripts/nyt_state.js
 
 footer_scripts:
+  - scripts/vega_embed.js
+  - scripts/chart_ui.js
 
 # Site Settings
 locale                   : "en-US"

@@ -21,48 +21,31 @@ negative mental health implications
 </a> to self-isolation and quarantine.
 {% endcomment %}
 
-<div class="tabs">
+<div class="tab">
+  <button class="tablinks" id="default-open" onclick="openChart(event, 'country-case-tab')">World: Cases</button>
+  <button class="tablinks" onclick="openChart(event, 'country-death-tab')">World: Deaths</button>
+  <button class="tablinks" onclick="openChart(event, 'usa-case-tab')">USA: Cases</button>
+  <button class="tablinks" onclick="openChart(event, 'usa-death-tab')">USA: Deaths</button>
+</div>
 
-    <div class="tab">
-        <input type="radio" id="tab-1" name="tab-group-1" checked>
-        <label for="tab-1">World: Cases</label>
+<div class="tab-content" id="country-case-tab">
+    <h2 class="centered">Country Trends</h2>
+    <div id="country_vis"></div>
+</div>
 
-        <div class="tab-content">
-            <h2 class="centered">Country Trends</h2>
-            <div id="country_vis"></div>
-        </div>
-    </div>
-    
-    <div class="tab">
-        <input type="radio" id="tab-2" name="tab-group-1">
-        <label for="tab-2">World: Deaths</label>
+<div class="tab-content" id="country-death-tab">
+    <h2 class="centered">Country Trends</h2>
+    <div id="country_death_vis"></div>
+</div>
 
-        <div class="tab-content">
-            <h2 class="centered">Country Trends</h2>
-            <div id="country_death_vis"></div>
-        </div>
-    </div>
+<div class="tab-content" id="usa-case-tab">
+    <h2 class="centered">State Trends</h2>
+    <div id="state_vis"></div>
+</div>
 
-    <div class="tab">
-        <input type="radio" id="tab-3" name="tab-group-1">
-        <label for="tab-3">USA: Cases</label>
-
-        <div class="tab-content">
-            <h2 class="centered">State Trends</h2>
-            <div id="state_vis"></div>
-        </div>
-    </div>
-
-    <div class="tab">
-        <input type="radio" id="tab-4" name="tab-group-1">
-        <label for="tab-4">USA: Deaths</label>
-
-        <div class="tab-content">
-            <h2 class="centered">State Trends</h2>
-            <div id="state_death_vis"></div>
-        </div>
-    </div>
-
+<div class="tab-content" id="usa-death-tab">
+    <h2 class="centered">State Trends</h2>
+    <div id="state_death_vis"></div>
 </div>
 
 <h2 id="lockdown_section">Effects of Lockdowns</h2>
@@ -92,7 +75,7 @@ regions within the country that have declared a lockdown, such as in case of the
 Likewise, when visualizing US states, 
 a <i>full lockdown</i> is 
 one where there is a state-wide 
-declaration of a lockdown.
+declaration of a shelter-at-home or stay-at-home order.
 </p>
 
 <p>
