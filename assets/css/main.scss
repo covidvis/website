@@ -17,6 +17,27 @@ body {
 }
 
 
+html {
+    background-color: rgb(256, 256, 256);
+}
+
+.page__outer {
+    background-color: rgb(256, 256, 256);
+}
+
+.page__inner-wrap {
+    background-color: rgb(256, 256, 256);
+}
+
+.page__meta {
+    background-color: rgb(256, 256, 256);
+}
+
+
+main {
+    background-color: rgb(256, 256, 256);
+}
+
 h2 {
     font-size: 1.25em;
     font-family: 'Khula', sans-serif, -apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
@@ -48,6 +69,7 @@ canvas {
 .page {
     width: calc(100% - #{$right-sidebar-width-narrow});
     min-width: 864px;
+    background-color: rgb(256, 256, 256);
 }
 
 #footer.page__footer {
@@ -77,6 +99,7 @@ canvas {
 .page__footer {
     background:#000000; 
 }
+
 
 @media only screen and (max-width: 1300px) {
     .github-corner {
