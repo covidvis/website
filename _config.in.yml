@@ -18,6 +18,7 @@ head_scripts:
   - https://cdn.jsdelivr.net/npm//vega@5
   - https://cdn.jsdelivr.net/npm//vega-lite@4.0.2
   - https://cdn.jsdelivr.net/npm//vega-embed@6
+  - https://code.jquery.com/jquery-3.4.1.slim.min.js
 
 footer_scripts:
   - scripts/vega_embed.js

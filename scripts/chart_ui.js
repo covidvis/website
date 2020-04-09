@@ -1,23 +1,14 @@
-document.getElementById('default-open').click();
+$('.default-open').addClass('active').click();
 
-function openChart(evt, chartName) {
-    // Declare all variables
-    var i, tabcontent, tablinks;
+function openTabs(evt, tabs_class) {
+    // Get all elements at same level with class='tab-content' and hide them
+    $(tabs_class).parent().children('.tab-content').css('display', 'none');
 
-
-    // Get all elements with class='tabcontent' and hide them
-    tabcontent = document.getElementsByClassName('tab-content');
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = 'none';
-    }
-
-    // Get all elements with class='tablinks' and remove the class 'active'
-    tablinks = document.getElementsByClassName('tablinks');
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(' active', '');
-    }
+    // Get all elements in this button group remove the class 'active'
+    var button = $(evt.currentTarget);
+    button.parent().children().removeClass('active');
 
     // Show the current tab, and add an 'active' class to the button that opened the tab
-    document.getElementById(chartName).style.display = 'block';
-    evt.currentTarget.className += ' active';
+    $(tabs_class).css('display', 'block');
+    button.addClass('active');
 }

@@ -23,30 +23,31 @@ negative mental health implications
 
 <div class="tabbed-ui overflow-center">
 <div class="tab">
-  <button class="tablinks" id="default-open" onclick="openChart(event, 'country-case-tab')">World: Cases</button>
-  <button class="tablinks" onclick="openChart(event, 'country-death-tab')">World: Deaths</button>
-  <button class="tablinks" onclick="openChart(event, 'usa-case-tab')">USA: Cases</button>
-  <button class="tablinks" onclick="openChart(event, 'usa-death-tab')">USA: Deaths</button>
+<span class="button-group">
+  <button class="tablinks default-open" onclick="openTabs(event, '.tab-content-world')">World</button>
+  <button class="tablinks" onclick="openTabs(event, '.tab-content-usa')">USA</button>
+</span>
+<span style="width: 1px; float: left;">&nbsp;</span>
+<span class="button-group">
+  <button class="tablinks default-open" onclick="openTabs(event, '.tab-content-cases')">Cases</button>
+  <button class="tablinks" onclick="openTabs(event, '.tab-content-deaths')">Deaths</button>
+</span>
 </div>
 
-<div class="tab-content" id="country-case-tab">
+<div class="tab-content tab-content-world" id="world-tab">
+{% comment %}
     <h2 class="centered">Country Trends</h2>
-    <div id="country_vis"></div>
+{% endcomment %}
+    <div class="tab-content tab-content-cases" id="country_vis"></div>
+    <div class="tab-content tab-content-deaths" id="country_death_vis"></div>
 </div>
 
-<div class="tab-content" id="country-death-tab">
-    <h2 class="centered">Country Trends</h2>
-    <div id="country_death_vis"></div>
-</div>
-
-<div class="tab-content" id="usa-case-tab">
+<div class="tab-content tab-content-usa" id="usa-tab">
+{% comment %}
     <h2 class="centered">State Trends</h2>
-    <div id="state_vis"></div>
-</div>
-
-<div class="tab-content" id="usa-death-tab">
-    <h2 class="centered">State Trends</h2>
-    <div id="state_death_vis"></div>
+{% endcomment %}
+    <div class="tab-content tab-content-cases" id="state_vis"></div>
+    <div class="tab-content tab-content-deaths" id="state_death_vis"></div>
 </div>
 </div>
 
